@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 8081
 eureka:
   instance:
-    hostname: my-server  #eureka实例的主机名
+    hostname: my-server02  #eureka实例的主机名
   client:
     service-url:
       defaultZone: http://eureka-server01:8761/eureka/,http://eureka-server02:8762/eureka/

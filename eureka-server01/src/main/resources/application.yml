@@ -5,8 +5,8 @@ eureka:
   instance:
     hostname: eureka-server01  #eureka实例的主机名
   client:
-    register-with-eureka: true #不注册本身到Eureka注册中心
-    fetch-registry: true #不从Eureka注册中心获取服务的注册信息
+    register-with-eureka: true #注册本身到Eureka注册中心
+    fetch-registry: true #从Eureka注册中心获取服务的注册信息
     service-url:
       defaultZone: http://eureka-server02:8762/eureka/
 
