@@ -39,4 +39,9 @@ public class HelloController {
         String body = restTemplate.getForEntity("http://my-server02/hello", String.class).getBody();
         System.out.println(body);
     }
+
+    @GetMapping("hello1")
+    public void sayHello1(){
+        System.out.println("this is server01");
+    }
 }
