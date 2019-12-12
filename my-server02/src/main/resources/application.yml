@@ -1,11 +1,21 @@
 server:
   port: 8081
+
+spring:
+  application:
+    name: my-server02
+
 eureka:
   instance:
     hostname: localhost  #eureka实例的主机名
   client:
     service-url:
       defaultZone: http://eureka-server01:8761/eureka/,http://eureka-server02:8762/eureka/
-spring:
-  application:
-    name: my-server02
+
+feign:
+  hystrix:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    connection-timeout: 5000
