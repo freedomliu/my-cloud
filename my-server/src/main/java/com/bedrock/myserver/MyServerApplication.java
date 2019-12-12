@@ -16,7 +16,7 @@ public class MyServerApplication {
     }
 
     @Bean
-    @LoadBalanced
+    @LoadBalanced //这个注解的意思是在启动时先加载注册中心的域名列表
     RestTemplate restTemplate(){
         return new RestTemplate();
     }
