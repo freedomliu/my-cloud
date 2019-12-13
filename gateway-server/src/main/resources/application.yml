@@ -1,0 +1,19 @@
+server:
+  port: 8082
+eureka:
+  instance:
+    hostname: localhost  #eureka实例的主机名
+  client:
+    register-with-eureka: true #注册本身到Eureka注册中心
+    fetch-registry: true #从Eureka注册中心获取服务的注册信息
+    service-url:
+      defaultZone: http://eureka-server01:8761/eureka/,http://eureka-server02:8762/eureka/
+
+spring:
+  application:
+    name: gateway-server
+    gateway:
+      discovery: #是否与服务发现组件进行结合，通过 serviceId(必须设置成大写) 转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+        locator: #路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问。
+          enabled: false
+          lower-case-service-id: true

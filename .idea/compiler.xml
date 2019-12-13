@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server01" />
         <module name="eureka-server02" />
+        <module name="gateway-server" />
         <module name="my-server" />
         <module name="my-server02" />
       </profile>
@@ -18,6 +19,7 @@
       <module name="cloud" options="-parameters" />
       <module name="eureka-server01" options="-parameters" />
       <module name="eureka-server02" options="-parameters" />
+      <module name="gateway-server" options="-parameters" />
       <module name="my-server" options="-parameters" />
       <module name="my-server02" options="-parameters" />
     </option>
